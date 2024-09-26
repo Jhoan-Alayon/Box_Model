@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    background-image: radial-gradient(circle at 50% -20.71%, #d8fffe 0, #c6fffa 16.67%, 
+    #b3faf6 33.33%, #9df2f2 50%, #86eaf0 66.67%, #6ee2ee 83.33%, #55daee 100%);
+}
+
+.titulo{
+    text-align: center;
+    font-size: 40px;
+}
+
+span{
+    font-size: 20px;
+}
+
+nav{
+    width: 70%;
+}
+/*********** Flexbox ***********/
+/*header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;    
+    list-style: none;
+    
+}*/
+/*********** Grid ************/
+header{
+   display: grid;
+   grid-template-rows: auto auto;
+   align-items: center;
+}
+
+.menu{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+    
+
+}
+
+
+
+.link{
+    color: black;
+    text-decoration: none;
+}
+
+.hero{
+    background-image: url("./hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+.sub-titulo-hero{
+    font-size: 70px;
+    text-align: center;
+    padding-top: 60px;
+    text-shadow: white 1px 0 10px;
+}
+.domicilio{
+    font-size: 50px;
+    margin: 50px;
+    text-shadow: white 1px 0 10px;
+
+}
+.btn-contactanos-hero{
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    margin-left: 50px;
+    border: solid 1px black;
+    padding: 10px;
+    border-radius: 5rem;
+    background-color: rgb(0,0,0,0.5);
+}
+
+/**************** Grit ******************/
+
+.contenedor{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "sub-titulo sub-titulo"
+    "servicio-1 servicio-2";
+    gap: 20px;
+    padding: 40px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+.subtitulo{
+    grid-area: sub-titulo;
+    text-align: center;
+}
+.servicio1{
+    grid-area: servicio-1;
+}
+.servicio2{
+    grid-area: servicio-2;
+}
+.servicio{
+    padding: 15px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
